@@ -5,7 +5,8 @@ let oneEuroIs = {
 };
 
 function fromDollarToYen(dollars) {
-    return (dollars / oneEuroIs["USD"]) * oneEuroIs["JPY"];
+    let result = +((dollars / oneEuroIs["USD"]) * oneEuroIs["JPY"]).toFixed(2);
+    return result 
 }
 
 function fromEuroToDollar(euros) {
@@ -13,7 +14,8 @@ function fromEuroToDollar(euros) {
 }
 
 function fromYenToPound(yen) {
-    return (yen / oneEuroIs["JPY"]) * oneEuroIs["GBP"];
+    let nose = +((yen / oneEuroIs["JPY"]) * oneEuroIs["GBP"]).toFixed(2);
+    return nose
 }
 
 module.exports = { fromEuroToDollar, fromDollarToYen, fromYenToPound };
